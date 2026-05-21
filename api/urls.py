@@ -3,7 +3,9 @@ from .views import (
     RegisterView,
     ChangePasswordView,
     BookListCreateView,
-    BookDetailView
+    BookDetailView,
+    BookReviewsView,
+    ReviewDetailView
 )
 
 from rest_framework_simplejwt.views import (
@@ -11,18 +13,21 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
+
 urlpatterns = [
+    path('register/', RegisterView.as_view(), name='register'),
 
-    path('register/', RegisterView.as_view()),
+    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
 
-    path('token/', TokenObtainPairView.as_view()),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
-    path('token/refresh/', TokenRefreshView.as_view()),
+    path('change-password/', ChangePasswordView.as_view(), name='change_password'),
 
-    path('change-password/', ChangePasswordView.as_view()),
+    path('books/', BookListCreateView.as_view(), name='book_list_create'),
 
+    path('books/<int:pk>/', BookDetailView.as_view(), name='book_detail'),
 
-    path('books/', BookListCreateView.as_view()),
+    path('books/<int:book_id>/reviews/', BookReviewsView.as_view(), name='book_reviews'),
 
-    path('books/<int:pk>/', BookDetailView.as_view()),
+    path('reviews/<int:pk>/', ReviewDetailView.as_view(), name='review_detail'),
 ]
