@@ -144,3 +144,40 @@ All endpoints were tested using Postman.
 - Only authenticated users can add reviews.
 - Users can only edit or delete their own reviews.
 - Only admin users can create, update, or delete books.
+
+
+
+# Postman Testing Screenshots
+
+## Register Endpoint
+![Register](register.png)
+
+## Login Endpoint
+![Login](login.png)
+
+## Change Password Endpoint
+![Change Password](change-password.png)
+
+## Add Book Endpoint
+![Add Book](add-book.png)
+
+## Get Books Endpoint
+![Get Books](get-books.png)
+
+## Update Book Endpoint
+![Update Book](update-book.png)
+
+## Delete Book Endpoint
+![Delete Book](delete-book.png)
+
+## Add Review Endpoint
+![Add Review](add-review.png)
+
+## Get Reviews Endpoint
+![Get Reviews](get-reviews.png)
+
+## Update Review Endpoint
+![Update Review](update-review.png)
+
+## Delete Review Endpoint
+![Delete Review](delete-review.png)
